@@ -21,6 +21,9 @@
     "twilio": "^6.0.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@stryker-mutator/core": "^9.6.1",
+    "@stryker-mutator/tap-runner": "^9.6.1",
     "pm2": "^6.0.14"
   }
 }
