@@ -9,7 +9,14 @@ permissions:
   packages: write
 
 jobs:
+  ci:
+    uses: muri1o/pipelines/.github/workflows/ci.yml@main
+    with:
+      image: muri1o/whatsapp-bot
+    secrets: inherit
+
   build-push:
+    needs: ci
     uses: muri1o/pipelines/.github/workflows/build-push.yml@main
     with:
       image: muri1o/whatsapp-bot
