@@ -13,4 +13,7 @@ jobs:
       image: muri1o/whatsapp-bot
       node-version: '20'
       test-command: npm test
+      enable-stryker: true
+      enable-playwright: true
+      k6-script: test/performance/load.js
     secrets: inherit
