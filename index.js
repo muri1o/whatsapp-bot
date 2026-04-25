@@ -59,7 +59,7 @@ app.post('/webhook', async (req, res) => {
   await handleMessage(from, body);
 });
 
-app.listen(3000, '0.0.0.0', () => {
+app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
   console.log('Bot online! Webhook em http://0.0.0.0:3000/webhook');
   console.log('Configure no Twilio: https://console.twilio.com → Messaging → Sandbox → Webhook URL');
   scheduler.init(sendMessage, chat);

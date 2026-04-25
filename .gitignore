@@ -6,4 +6,5 @@ schedules.json
 .worktrees
 reports/
 playwright-report/
+test-results/
 k6-summary.json
