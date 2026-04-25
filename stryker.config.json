@@ -3,7 +3,7 @@
   "testRunner": "tap",
   "mutate": ["session.js"],
   "reporters": ["html", "json", "clear-text"],
-  "htmlReporter": { "fileName": "reports/mutation/index.html" },
+  "htmlReporter": { "baseDir": "reports/mutation" },
   "jsonReporter": { "fileName": "reports/mutation/report.json" },
   "thresholds": { "high": 80, "low": 70, "break": 70 },
   "coverageAnalysis": "perTest",
