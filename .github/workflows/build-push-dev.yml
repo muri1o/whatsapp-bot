@@ -4,6 +4,10 @@ on:
   push:
     branches: [dev]
 
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   build-push:
     uses: muri1o/pipelines/.github/workflows/build-push.yml@main
