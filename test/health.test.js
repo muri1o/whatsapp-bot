@@ -1,4 +1,4 @@
-const { describe, it, before, after } = require('node:test');
+const { describe, it } = require('node:test');
 const assert = require('assert');
 const fs = require('fs');
 const path = require('path');
@@ -110,7 +110,7 @@ describe('session.js full coverage', () => {
     }
     const history = getHistory(chatId);
     // Should have at most 40 entries
-    assert.ok(history.length <= 40, `Expected <= 40, got ${history.length}`);
+    assert.strictEqual(history.length, 40);
     // Last entry should be msg-44
     assert.strictEqual(history[history.length - 1].content, 'msg-44');
   });
