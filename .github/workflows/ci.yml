@@ -1,0 +1,16 @@
+name: CI
+
+on:
+  push:
+    branches: [dev]
+  pull_request:
+    branches: [main]
+
+jobs:
+  ci:
+    uses: muri1o/pipelines/.github/workflows/ci.yml@main
+    with:
+      image: muri1o/whatsapp-bot
+      node-version: '20'
+      test-command: npm test
+    secrets: inherit
