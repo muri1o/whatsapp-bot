@@ -16,5 +16,4 @@ jobs:
     uses: muri1o/pipelines/.github/workflows/build-push.yml@main
     with:
       image: muri1o/whatsapp-bot
-      tag: dev-${{ github.sha }}
     secrets: inherit
